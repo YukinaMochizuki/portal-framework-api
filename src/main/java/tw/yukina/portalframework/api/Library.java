@@ -7,4 +7,8 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
+
+    public static String getVersion() {
+        return "0.0.1";
+    }
 }
