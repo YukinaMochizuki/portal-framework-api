@@ -26,6 +26,8 @@ interface JobBuilder {
 
   public JobBuilder setInputListener(InputListener inputListener);
 
+  public JobBuilder setInputListener(Class<? extends InputEvent> eventType);
+
   public JobBuilder setIsAbstract(boolean isAbstract);
 
   public JobBuilder setReturnObject(Set<ObjectDefine> objectDefine);

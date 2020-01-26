@@ -7,25 +7,7 @@ import tw.yukina.portalframework.api.input.*;
 import java.util.Set;
 import java.util.List;
 
-public interface JobContainer {
-
-	public String getId();
-
-	public void setName(String name);
-
-	public String getName();
-
-	public void setShortDepiction(String shortDepiction);
-
-	public String getShortDepiction();
-
-	public void setDepiction(String depiction);
-
-	public String getDepiction();
-
-	public void setTags(Set<String> tags);
-
-	public Set<String> getTags();
+public interface JobContainer extends BaseInfo{
 
 	public void setPermission(String permission);
 
