@@ -1,5 +1,5 @@
 package tw.yukina.portalframework.api.launch;
 
-interface LaunchArgs {
+public interface LaunchArgs {
     public String[] launchTags();
 }
