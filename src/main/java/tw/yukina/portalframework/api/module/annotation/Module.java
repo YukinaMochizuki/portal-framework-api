@@ -14,4 +14,6 @@ public @interface Module {
 
   public String depiction() default "";
 
+  public String shortDepiction() default "";
+
 }
