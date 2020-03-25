@@ -9,6 +9,11 @@ public interface StepContainer extends BaseInfo{
 
 	public void setIsThreadSafe(boolean isThreadSafe);
 
-	public boolean getIsThreadSafe();
+	public boolean isThreadSafe();
 
+	public boolean isDisable();
+
+	public void setDisable(boolean isDisable);
+
+	public Class<? extends StepRunnable> getStepRunnableClass();
 }

@@ -11,6 +11,10 @@ public @interface Step {
 
     public String[] tags() default {};
 
+    public String depiction() default "";
+
+    public String shortDepiction() default "";
+
     public boolean isThreadSafe() default false;
 
     public boolean isDisable() default false;

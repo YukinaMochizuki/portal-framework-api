@@ -9,13 +9,5 @@ public abstract class StepRunnable {
 
     public abstract Map<String, Object> getReturnMap();
 
-    public String getShortDepiction(){
-        return "";
-    }
-
-    public String getDepiction(){
-        return "";
-    }
-
     public void clean(){}
 }
