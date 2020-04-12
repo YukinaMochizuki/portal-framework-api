@@ -15,7 +15,5 @@ public @interface Step {
 
     public String shortDepiction() default "";
 
-    public boolean isThreadSafe() default false;
-
     public boolean isDisable() default false;
 }

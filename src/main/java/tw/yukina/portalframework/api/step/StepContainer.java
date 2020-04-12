@@ -1,19 +1,11 @@
 package tw.yukina.portalframework.api.step;
 
-import java.util.Set;
-import tw.yukina.portalframework.api.util.*;
+import com.google.inject.Injector;
 
-public interface StepContainer extends BaseInfo{
+public interface StepContainer {
 
-	public Set<ObjectDefine> getReturnDefine();
+    public StepPlan getStepPlan();
 
-	public void setIsThreadSafe(boolean isThreadSafe);
+    public void runStep(StepRuntimeController stepRuntimeController, Injector injector);
 
-	public boolean isThreadSafe();
-
-	public boolean isDisable();
-
-	public void setDisable(boolean isDisable);
-
-	public Class<? extends StepRunnable> getStepRunnableClass();
 }

@@ -1,5 +1,5 @@
 package tw.yukina.portalframework.api.step;
 
-interface StepController {
+interface StepRuntimeController {
     public void putReturn();
 }
