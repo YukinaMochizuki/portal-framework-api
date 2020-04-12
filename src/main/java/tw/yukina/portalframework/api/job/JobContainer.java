@@ -1,30 +1,20 @@
 package tw.yukina.portalframework.api.job;
 
-import tw.yukina.portalframework.api.step.*;
-import tw.yukina.portalframework.api.util.*;
-import tw.yukina.portalframework.api.input.*;
+import tw.yukina.portalframework.api.job.enums.WorkTypeEnum;
 
+import java.util.Map;
 import java.util.Set;
-import java.util.List;
 
-public interface JobContainer extends BaseInfo{
+public interface JobContainer {
 
-	public void setPermission(String permission);
+    public JobPlan getJobPlan();
 
-	public String getPermission();
+    public WorkTypeEnum getWorkTypeEnum();
 
-	public Set<ObjectDefine> getRequireParameter();
+    public Set<Class<?>> getRequireParametersDefine();
 
-	public boolean getIsOption();
+    public Map<String, Class<?>> getReturnDefine();
 
-	public void setInputListener(InputListener inputListener);
-
-	public InputListener getInputListener();
-
-	public List<StepContainer> getStepControllerList();
-
-	public boolean getIsAbstract();
-
-	public Set<ObjectDefine> getReturnObject();
+    public void run(JobRuntimeController jobRuntimeController);
 
 }

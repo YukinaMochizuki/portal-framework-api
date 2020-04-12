@@ -6,7 +6,7 @@ import tw.yukina.portalframework.api.input.*;
 
 import java.util.Set;
 
-interface JobBuilder {
+public interface JobBuilder {
 
   public JobBuilder setID(String id);
 
@@ -20,7 +20,7 @@ interface JobBuilder {
 
   public JobBuilder setPermission(String permission);
 
-  public JobBuilder setRequireParameter(Set<ObjectDefine> objectDefine);
+  public JobBuilder setRequireParameters(Set<ObjectDefine> objectDefine);
 
   public JobBuilder setIsOption(boolean isOption);
 
@@ -32,16 +32,19 @@ interface JobBuilder {
 
   public JobBuilder setReturnObject(Set<ObjectDefine> objectDefine);
 
-  public JobBuilder start(String name);
+  public JobBuilder setImplementJob(String implementJob);
 
-  public JobBuilder start(StepContainer stepContainer);
+  public JobBuilder start(String id);
 
-  public JobBuilder next(String name);
+  public JobBuilder start(StepPlan stepPlan);
 
-  public JobBuilder next(StepContainer stepContainer);
+  public JobBuilder next(String id);
 
-  public JobBuilder end(String name);
+  public JobBuilder next(StepPlan stepPlan);
 
-  public JobBuilder end(StepContainer stepContainer);
+  public JobBuilder end(String id);
 
+  public JobBuilder end(StepPlan stepPlan);
+
+  public JobPlan build();
 }
