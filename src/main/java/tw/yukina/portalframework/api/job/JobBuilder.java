@@ -18,33 +18,39 @@ public interface JobBuilder {
 
   public JobBuilder setTags(Set<String> tags);
 
-  public JobBuilder setPermission(String permission);
-
-  public JobBuilder setRequireParameters(Set<ObjectDefine> objectDefine);
-
   public JobBuilder setIsOption(boolean isOption);
 
-  public JobBuilder setInputListener(InputListener inputListener);
+  public JobBuilder addInputListenersDefine(InputListener inputListener);
 
-  public JobBuilder setInputListener(Class<? extends InputEvent> eventType);
+  public JobBuilder setInputListenersDefine(Set<InputListener> inputListeners);
 
   public JobBuilder setIsAbstract(boolean isAbstract);
 
-  public JobBuilder setReturnObject(Set<ObjectDefine> objectDefine);
-
   public JobBuilder setImplementJob(String implementJob);
 
-  public JobBuilder start(String id);
+  public JobBuilder startByStep(String id);
 
-  public JobBuilder start(StepPlan stepPlan);
+  public JobBuilder startByStep(StepPlan stepPlan);
 
-  public JobBuilder next(String id);
+  public JobBuilder nextByStep(String id);
 
-  public JobBuilder next(StepPlan stepPlan);
+  public JobBuilder nextByStep(StepPlan stepPlan);
 
-  public JobBuilder end(String id);
+  public JobBuilder endByStep(String id);
 
-  public JobBuilder end(StepPlan stepPlan);
+  public JobBuilder endByStep(StepPlan stepPlan);
+
+  public JobBuilder startByJob(String id);
+
+  public JobBuilder startByJob(JobPlan jobPlan);
+
+  public JobBuilder nextByJob(String id);
+
+  public JobBuilder nextByJob(JobPlan jobPlan);
+
+  public JobBuilder endByJob(String id);
+
+  public JobBuilder endByJob(JobPlan jobPlan);
 
   public JobPlan build();
 }

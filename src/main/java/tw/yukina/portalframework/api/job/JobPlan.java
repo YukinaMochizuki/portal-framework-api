@@ -26,6 +26,4 @@ public interface JobPlan extends BaseInfo{
 	public List<WorkDefine> getJobWorkList();
 
 	public String getImplementJob();
-
-	public void setImplementJob(String implementJob);
 }
