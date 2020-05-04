@@ -1,11 +1,17 @@
 package tw.yukina.portalframework.api.input;
 
-import tw.yukina.portalframework.api.job.*;
+import java.lang.reflect.ParameterizedType;
+import java.util.regex.Pattern;
 
-public interface InputListener{
+public abstract class InputListener<T> {
 
-  public JobPlan getListeningJob();
+    public abstract Class<? extends InputEvent<T>> getListeningType();
 
-  public Class<? extends InputEvent> getListeningType();
+    public abstract T getListenerProperty();
 
+    public Class<?> getType(){
+        return (Class<?>)
+                ((ParameterizedType)getClass().getGenericSuperclass())
+                        .getActualTypeArguments()[0];
+    }
 }
