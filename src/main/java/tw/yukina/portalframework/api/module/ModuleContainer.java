@@ -15,8 +15,8 @@ public interface ModuleContainer extends BaseInfo {
 
   public Module getModuleAnnotation();
 
-  public List<StepContainer> getStepContainerList();
+  public List<StepPlan> getStepPlanList();
 
-  public List<JobContainer> getJobContainerList();
+  public List<JobPlan> getJobPlanList();
 
 }

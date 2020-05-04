@@ -20,9 +20,9 @@ public interface JobBuilder {
 
   public JobBuilder setIsOption(boolean isOption);
 
-  public JobBuilder addInputListenersDefine(InputListener inputListener);
+  public JobBuilder addInputListenersDefine(InputListener<?> inputListener);
 
-  public JobBuilder setInputListenersDefine(Set<InputListener> inputListeners);
+  public JobBuilder setInputListenersDefine(Set<InputListener<?>> inputListeners);
 
   public JobBuilder setIsAbstract(boolean isAbstract);
 

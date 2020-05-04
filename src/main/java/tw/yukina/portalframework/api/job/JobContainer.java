@@ -7,6 +7,8 @@ import java.util.Set;
 
 public interface JobContainer {
 
+    public String getFullId();
+
     public JobPlan getJobPlan();
 
     public WorkTypeEnum getWorkTypeEnum();

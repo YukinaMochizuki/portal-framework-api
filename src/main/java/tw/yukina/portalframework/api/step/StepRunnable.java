@@ -7,7 +7,8 @@ public abstract class StepRunnable {
 
     public abstract void exec();
 
-    public abstract Map<String, Object> getReturnMap();
+    public abstract StepReturnDefine getReturnMap();
 
     public void clean(){}
+
 }

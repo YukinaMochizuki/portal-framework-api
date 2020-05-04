@@ -9,11 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 
-public interface JobPlan extends BaseInfo{
-
-	public boolean isClose();
-
-	public void close();
+public interface JobPlan extends Plan {
 
 	public boolean getIsAbstract();
 
@@ -21,9 +17,10 @@ public interface JobPlan extends BaseInfo{
 
 	public void  setIsOption(boolean isOption);
 
-	public Set<InputListener> getInputListenersDefine();
+	public Set<InputListener<?>> getInputListenersDefine();
 
 	public List<WorkDefine> getJobWorkList();
 
 	public String getImplementJob();
+
 }
